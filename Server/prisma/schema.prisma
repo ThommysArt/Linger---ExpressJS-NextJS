@@ -1,69 +1,67 @@
-
 datasource db {
   provider  = "postgresql"
   url       = env("DATABASE_URL")
   directUrl = env("DIRECT_URL")
 }
-        
 
 generator client {
   provider = "prisma-client-js"
 }
 
 model Language {
-  id       Int      @id @default(autoincrement())
-  name     String
-  country  String
-  levels   Level[]
-  quizzes  Quiz[]
+  id           Int            @id @default(autoincrement())
+  name         String
+  country      String
+  levels       Level[]
+  quizzes      Quiz[]
   UserLanguage UserLanguage[]
 }
 
 model Level {
-  id          Int      @id @default(autoincrement())
-  title       String
-  languageId  Int
-  language    Language  @relation(fields: [languageId], references: [id])
-  lessons     Lesson[]
-  quizzes     Quiz[]
+  id           Int            @id @default(autoincrement())
+  title        String
+  languageId   Int
+  language     Language       @relation(fields: [languageId], references: [id])
+  lessons      Lesson[]
+  quizzes      Quiz[]
   UserLanguage UserLanguage[]
 }
 
 model Lesson {
-  id          Int      @id @default(autoincrement())
+  id          Int    @id @default(autoincrement())
   text        String
   transcribed String
   levelId     Int
-  level       Level    @relation(fields: [levelId], references: [id])
+  level       Level  @relation(fields: [levelId], references: [id])
 }
 
 model User {
-  userId    String   @id
-  fullname  String
+  userId       String         @id
+  fullname     String
   UserLanguage UserLanguage[]
   FinishedQuiz FinishedQuiz[]
 }
 
 model UserLanguage {
-  id         Int     @id @default(autoincrement())
+  id         Int      @id @default(autoincrement())
   userId     String
   languageId Int
   levelId    Int
-  user       User    @relation(fields: [userId], references: [userId])
+  user       User     @relation(fields: [userId], references: [userId])
   language   Language @relation(fields: [languageId], references: [id])
-  level      Level   @relation(fields: [levelId], references: [id])
-  
+  level      Level    @relation(fields: [levelId], references: [id])
+
   @@unique([userId, languageId, levelId]) // Ensures a user can only have one level per language
 }
 
 model Quiz {
-  id          Int      @id @default(autoincrement())
-  title       String
-  levelId     Int
-  languageId  Int
-  level       Level    @relation(fields: [levelId], references: [id])
-  language    Language @relation(fields: [languageId], references: [id])
-  questions   Question[]
+  id           Int            @id @default(autoincrement())
+  title        String
+  levelId      Int
+  languageId   Int
+  level        Level          @relation(fields: [levelId], references: [id])
+  language     Language       @relation(fields: [languageId], references: [id])
+  questions    Question[]
   FinishedQuiz FinishedQuiz[]
 }
 
@@ -76,19 +74,19 @@ model Question {
 }
 
 model Option {
-  id         Int     @id @default(autoincrement())
+  id         Int      @id @default(autoincrement())
   label      String
-  correct    Boolean @default(false)
+  correct    Boolean  @default(false)
   questionId Int
   question   Question @relation(fields: [questionId], references: [id])
 }
 
 model FinishedQuiz {
-  id      Int     @id @default(autoincrement())
-  userId  String
-  quizId  Int
-  user    User    @relation(fields: [userId], references: [userId])
-  quiz    Quiz    @relation(fields: [quizId], references: [id])
-  
+  id     Int    @id @default(autoincrement())
+  userId String
+  quizId Int
+  user   User   @relation(fields: [userId], references: [userId])
+  quiz   Quiz   @relation(fields: [quizId], references: [id])
+
   @@unique([userId, quizId]) // Ensures a quiz is only finished once per user
 }
