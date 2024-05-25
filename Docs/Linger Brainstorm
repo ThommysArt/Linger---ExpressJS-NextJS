@@ -1,0 +1,50 @@
+Language Learning App: Backend Models
+
+Language
+- id: int = autoincrement()
+- name: string
+- country: string
+
+Level
+- id: int = autoincrement()
+- title: string
+- languageId: int
+
+Lesson
+- id: int = autoincrement()
+- text: sring
+- transcribed: string
+- levelId: int
+
+User
+- userId: string
+- fullname: string
+
+UserLanguage
+- id: int = autoincrement()
+- userId: string
+- languageId: int
+- levelId: int
+
+Quiz
+- id: int = autoincrement()
+- title: string
+- levelId: int
+- languageId: int
+
+Question
+- id: int = autoincrement()
+- label: string
+- quizId: int
+
+Option
+- id: int = autoincrement()
+- label: string
+- correct: Boolean = False
+- questionId: int
+
+FinishedQuiz
+- id: int = autoincrement()
+- userId: string
+- quizId: int
+
