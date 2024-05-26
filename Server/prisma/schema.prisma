@@ -85,6 +85,7 @@ model FinishedQuiz {
   id     Int    @id @default(autoincrement())
   userId String
   quizId Int
+  score  Int
   user   User   @relation(fields: [userId], references: [userId])
   quiz   Quiz   @relation(fields: [quizId], references: [id])
 

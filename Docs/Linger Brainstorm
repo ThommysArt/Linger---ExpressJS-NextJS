@@ -47,4 +47,5 @@ FinishedQuiz
 - id: int = autoincrement()
 - userId: string
 - quizId: int
+- score: int
 
