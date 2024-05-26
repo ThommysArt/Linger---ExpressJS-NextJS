@@ -38,6 +38,7 @@ model Lesson {
 model User {
   userId       String         @id
   fullname     String
+  isAdmin      Boolean        @default(false)
   UserLanguage UserLanguage[]
   FinishedQuiz FinishedQuiz[]
 }

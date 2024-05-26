@@ -2,6 +2,9 @@ import express, { Express, Request, Response , Application } from 'express';
 import dotenv from 'dotenv';
 import cors from 'cors'
 
+// Import the routers
+import LanguageRouter from './routes/language'
+
 //For env File 
 dotenv.config();
 
@@ -20,6 +23,8 @@ app.use(cors())
 app.get('/', (req: Request, res: Response) => {
   res.send('Welcome to Linger Server');
 });
+
+app.use("/api/v1/language", LanguageRouter)
 
 // Start the server
 app.listen(port, () => {
