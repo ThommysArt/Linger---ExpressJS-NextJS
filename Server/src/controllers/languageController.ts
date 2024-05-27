@@ -19,6 +19,16 @@ const LanguageController = {
         }
     },
 
+    // Define a controller to get all laanguages from the database
+    getAllLanguages: async (request: Request, response: Response) => {
+        try {
+            const languages = await prisma.language.findMany()
+            return response.status(200).json(languages);
+        } catch (error) {
+            return response.status(500).json(error);
+        }
+    },
+
     // Define a controller to create a language in the database
     createLanguage: async (request: Request, response: Response) => {
         try {
