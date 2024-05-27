@@ -11,8 +11,22 @@ To be able to use the server setup, open the project in your IDE and enter the t
 cd server
 ```
 
-Then run the following command:
+Then run the following command to install all dependencies:
+
+```plaintext
+npm i
+```
+
+Then run the following command to obtain your prisma client for database access:
+
+```plaintext
+npx prisma generate
+```
+
+Finally, we are one setting up the project. You can run the following command to start the server:
 
 ```plaintext
 npm run dev
 ```
+
+You can test your api routes at https://localhost:8000 using the Postman software.
