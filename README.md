@@ -23,6 +23,16 @@ Then run the following command to obtain your prisma client for database access:
 npx prisma generate
 ```
 
+Then create a file called ".env" for your database access keys and add the follwing code to it:
+
+```plaintext
+# Connect to Supabase via connection pooling with Supavisor.
+DATABASE_URL=<YOUR_DATABASE_URL>
+
+# Direct connection to the database. Used for migrations.
+DIRECT_URL=<YOUR_DIRECT_URL>
+```
+
 Finally, we are one setting up the project. You can run the following command to start the server:
 
 ```plaintext

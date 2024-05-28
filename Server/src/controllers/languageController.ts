@@ -44,7 +44,7 @@ const LanguageController = {
     // Define a controller to delete a language from the database
     deleteLanguage: async (request: Request, response: Response) => {
         try {
-            const language = await prisma.language.delete({
+            await prisma.language.delete({
                 where: {
                     id: request.body.id
                 }
