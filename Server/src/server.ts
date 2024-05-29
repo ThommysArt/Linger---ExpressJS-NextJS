@@ -4,6 +4,7 @@ import cors from 'cors'
 
 // Import the routers
 import LanguageRouter from './routes/language'
+import UserRouter from './routes/user'
 
 //For env File 
 dotenv.config();
@@ -25,6 +26,7 @@ app.get('/', (req: Request, res: Response) => {
 });
 
 app.use("/api/v1/language", LanguageRouter)
+app.use("/api/v1/users", UserRouter)
 
 // Start the server
 app.listen(port, () => {
