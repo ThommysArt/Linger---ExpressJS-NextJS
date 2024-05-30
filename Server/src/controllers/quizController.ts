@@ -46,12 +46,12 @@ const QuizController = {
 
     // Get the levelId of a quiz by ID
     getLevel: async (request: Request, response: Response) => {
-        const { id } = request.params;
-        try {
-            const quiz = await prisma.quiz.findUnique({
-                where: { id: Number(id) },
-                select: { levelId: true },
-            });
+      
+            Const {levelId} = request.params
+        try{
+                    const quiz = await prisma.quiz.finMany({
+                    where:{ levelId: levelId }
+                    })
             return response.status(200).json(quiz);
         } catch (error) {
             return response.status(500).json({ error: error.message });
@@ -60,12 +60,11 @@ const QuizController = {
 
     // Get the languageId of a quiz by ID
     getLanguageId: async (request: Request, response: Response) => {
-        const { id } = request.params;
+        const { LanguageId } = request.params;
         try {
-            const quiz = await prisma.quiz.findUnique({
-                where: { id: Number(id) },
-                select: { languageId: true },
-            });
+                 const quiz = await prisma.quiz.finMany({
+                    where:{ levelId: levelId }
+                    })
             return response.status(200).json(quiz);
         } catch (error) {
             return response.status(500).json({ error: error.message });
