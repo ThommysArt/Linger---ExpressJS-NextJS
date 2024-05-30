@@ -45,7 +45,7 @@ const QuizController = {
     },
 
     // Get the levelId of a quiz by ID
-    getLevel: async (request: Request, response: Response) => {
+    getLevelQuiz: async (request: Request, response: Response) => {
       
             Const {levelId} = request.params
         try{
@@ -59,7 +59,7 @@ const QuizController = {
     },
 
     // Get the languageId of a quiz by ID
-    getLanguageId: async (request: Request, response: Response) => {
+    getLanguageQuiz: async (request: Request, response: Response) => {
         const { LanguageId } = request.params;
         try {
                  const quiz = await prisma.quiz.finMany({
