@@ -8,6 +8,6 @@ router.get('/', UserController.getUser)
 router.get("/all", UserController.getAllUsers)
 router.post("/", UserController.createUser)
 router.delete("/", UserController.deleteUser)
-router.put("/", UserController.updateUsername)
+router.patch("/", UserController.updateUsername)
 
 export default router;
