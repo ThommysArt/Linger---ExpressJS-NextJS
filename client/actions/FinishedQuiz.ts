@@ -1,13 +1,6 @@
-const API_BASE_URL = 'http://localhost:3000/api';
+"use api"
 
-interface FinishedQuiz {
-  id?: number;
-  userId: number;
-  quizId: number;
-  score: number;
-}
-
-const addFinishedQuiz = async (userId: number, quizId: number, score: number): Promise<FinishedQuiz> => {
+const addFinishedQuiz = async (FinishedQuiz:FinishedQuiz): Promise<FinishedQuiz> => {
   const response = await fetch(`${API_BASE_URL}/finishedQuiz`, {
     method: 'POST',
     headers: {
