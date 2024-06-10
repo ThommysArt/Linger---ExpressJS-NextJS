@@ -58,3 +58,4 @@ async function updateScore(id:number, newScore:number):Promise<FinishedQuiz|unde
         console.error('Error updating quiz score:', error);
     }
 }
+export{getFinishedQuizzes,updateScore,deleteFinishedQuiz,addFinishedQuiz}

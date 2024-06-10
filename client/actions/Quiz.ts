@@ -81,4 +81,4 @@ async function deleteQuiz(id: string): Promise<{ message: string }> {
         throw error;
     }
 }
-
+export{getLanguageQuiz,addQuiz,updateQuiz,getQuiz,getLevelQuiz,deleteQuiz}
