@@ -1,18 +1,12 @@
-import express from 'express';
-import bodyParser from 'body-parser';
-import OptionController from './optionController';
+import { Router } from 'express';
+import OptionController from '../controllers/optionController';
 
-const app = express();
-const port = 3000;
+const router = Router()
 
-app.use(bodyParser.json());
+router.post('/options', OptionController.createOption);
+router.put('/options/:id', OptionController.updateOption);
+router.get('/options/:id', OptionController.getOption);
+router.get('/questions/:questionId/options', OptionController.getQuestionOptions);
+router.delete('/options/:id', OptionController.deleteOption);
 
-app.post('/options', OptionController.createOption);
-app.put('/options/:id', OptionController.updateOption);
-app.get('/options/:id', OptionController.getOption);
-app.get('/questions/:questionId/options', OptionController.getQuestionOptions);
-app.delete('/options/:id', OptionController.deleteOption);
-
-app.listen(port, () => {
-  console.log(`Server is running on port ${port}`);
-});
+export default router;
