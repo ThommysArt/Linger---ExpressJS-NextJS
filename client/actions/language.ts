@@ -108,3 +108,6 @@ const deleteLanguage = async (id: number): Promise<Language | null> => {
         return null
     }
 }
+
+
+export {getAllLanguages, getLanguage, createLanguage, deleteLanguage};
