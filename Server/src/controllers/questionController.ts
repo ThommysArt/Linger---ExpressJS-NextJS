@@ -1,5 +1,4 @@
 import { Request, Response } from 'express';
-import { Question } from './Question'; // Import the Question class
 
 export const createQuestion = (req: Request, res: Response): void => {
   const { label, quizid } = req.body;

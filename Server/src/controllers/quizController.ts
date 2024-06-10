@@ -13,7 +13,7 @@ const QuizController = {
             });
             return response.status(201).json(quiz);
         } catch (error) {
-            return response.status(500).json({ error: error.message });
+            return response.status(500).json({ error: error });
         }
     },
 
@@ -27,7 +27,7 @@ const QuizController = {
             });
             return response.status(200).json(quiz);
         } catch (error) {
-            return response.status(500).json({ error: error.message });
+            return response.status(500).json({ error: error });
         }
     },
 
@@ -40,34 +40,34 @@ const QuizController = {
             });
             return response.status(200).json(quiz);
         } catch (error) {
-            return response.status(500).json({ error: error.message });
+            return response.status(500).json({ error: error });
         }
     },
 
     // Get the levelId of a quiz by ID
     getLevelQuiz: async (request: Request, response: Response) => {
       
-            Const {levelId} = request.params
+            const {levelId} = request.params
         try{
-                    const quiz = await prisma.quiz.finMany({
-                    where:{ levelId: levelId }
+                    const quiz = await prisma.quiz.findMany({
+                    where:{ levelId: parseInt(levelId)}
                     })
             return response.status(200).json(quiz);
         } catch (error) {
-            return response.status(500).json({ error: error.message });
+            return response.status(500).json({ error: error });
         }
     },
 
     // Get the languageId of a quiz by ID
     getLanguageQuiz: async (request: Request, response: Response) => {
-        const { LanguageId } = request.params;
+        const { languageId } = request.params;
         try {
-                 const quiz = await prisma.quiz.finMany({
-                    where:{ levelId: levelId }
+                 const quiz = await prisma.quiz.findMany({
+                    where:{ languageId: parseInt(languageId) }
                     })
             return response.status(200).json(quiz);
         } catch (error) {
-            return response.status(500).json({ error: error.message });
+            return response.status(500).json({ error: error });
         }
     },
 
@@ -80,7 +80,7 @@ const QuizController = {
             });
             return response.status(200).json({ message: "Deleted Quiz successfully" });
         } catch (error) {
-            return response.status(500).json({ error: error.message });
+            return response.status(500).json({ error: error });
         }
     },
 };

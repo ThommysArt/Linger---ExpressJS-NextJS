@@ -23,7 +23,7 @@ const FinishedQuizController = {
         const { userId } = request.params;
         try {
             const finishedQuizzes = await prisma.finishedQuiz.findMany({
-                where: { userId: Number(userId) },
+                where: { userId: userId },
             });
             return response.status(200).json(finishedQuizzes);
         } catch (error) {
