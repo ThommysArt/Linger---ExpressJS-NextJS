@@ -1,12 +1,12 @@
 // finishedQuizApi.js
 "use server"
-import { Quiz } from "@/constants/types";
+import { FinishedQuiz, Quiz } from "@/constants/types";
 
 const API_URL = 'http://localhost:3000/api/v1'; // Adjust the base URL as necessary
 
 // Function to add a finished quiz\
 
-async function addFinishedQuiz(quizData:Quiz) {
+async function addFinishedQuiz(quizData:FinishedQuiz):Promise<FinishedQuiz|undefined>{
     try {
         const response = await fetch(`${API_URL}/finishedQuiz`, {
             method: 'POST',
@@ -22,7 +22,7 @@ async function addFinishedQuiz(quizData:Quiz) {
 }
 
 // Function to get finished quizzes by userId
-async function getFinishedQuizzes(userId:number) {
+async function getFinishedQuizzes(userId:number):Promise<FinishedQuiz|undefined> {
     try {
         const response = await fetch(`${API_URL}/finishedQuiz/${userId}`);
         return await response.json();
@@ -32,7 +32,7 @@ async function getFinishedQuizzes(userId:number) {
 }
 
 // Function to delete a finished quiz by id
-async function deleteFinishedQuiz(id:number) {
+async function deleteFinishedQuiz(id:number):Promise<FinishedQuiz|undefined> {
     try {
         const response = await fetch(`${API_URL}/finishedQuiz/${id}`, {
             method: 'DELETE'
@@ -44,7 +44,7 @@ async function deleteFinishedQuiz(id:number) {
 }
 
 // Function to update the score of a finished quiz by id
-async function updateScore(id:number, newScore:number) {
+async function updateScore(id:number, newScore:number):Promise<FinishedQuiz|undefined> {
     try {
         const response = await fetch(`${API_URL}/finishedQuiz/${id}/score`, {
             method: 'PUT',
