@@ -1,25 +1,12 @@
 // finishedQuizApi.js
 
-const API_URL = 'http://localhost:3000'; // Adjust the base URL as necessary
+import { Quiz } from "@/constants/types";
+
+const API_URL = 'http://localhost:3000/api/v1'; // Adjust the base URL as necessary
 
 // Function to add a finished quiz\
-const getAllLanguages = async (): Promise<Language[] | null> => {
-  try {
-      const response = await fetch("http://localhost:8000/api/v1/languages/all/", {
-      method: "GET",
-      headers: {
-          'Content-Type': 'application/json'
-      },
-      })
-      if (!response) {
-          return null
-      }
-      return response.json()
-  } catch (error) {
-      return null
-  }
-}
-async function addFinishedQuiz() {
+
+async function addFinishedQuiz(quizData:Quiz) {
     try {
         const response = await fetch(`${API_URL}/finishedQuiz`, {
             method: 'POST',
@@ -35,7 +22,7 @@ async function addFinishedQuiz() {
 }
 
 // Function to get finished quizzes by userId
-async function getFinishedQuizzes(userId) {
+async function getFinishedQuizzes(userId:number) {
     try {
         const response = await fetch(`${API_URL}/finishedQuiz/${userId}`);
         return await response.json();
@@ -45,7 +32,7 @@ async function getFinishedQuizzes(userId) {
 }
 
 // Function to delete a finished quiz by id
-async function deleteFinishedQuiz(id) {
+async function deleteFinishedQuiz(id:number) {
     try {
         const response = await fetch(`${API_URL}/finishedQuiz/${id}`, {
             method: 'DELETE'
@@ -57,7 +44,7 @@ async function deleteFinishedQuiz(id) {
 }
 
 // Function to update the score of a finished quiz by id
-async function updateScore(id, newScore) {
+async function updateScore(id:number, newScore:number) {
     try {
         const response = await fetch(`${API_URL}/finishedQuiz/${id}/score`, {
             method: 'PUT',
@@ -71,34 +58,3 @@ async function updateScore(id, newScore) {
         console.error('Error updating quiz score:', error);
     }
 }
-
-// Example usage:
-async function runExamples() {
-    // Adding a new finished quiz
-    const newQuiz = {
-        userId: '12345',
-        quizId: '67890',
-        score: 85,
-        date: '2024-06-10'
-    };
-    const addedQuiz = await addFinishedQuiz(newQuiz);
-    console.log('Added Quiz:', addedQuiz);
-
-    // Getting finished quizzes for a user
-    const userId = '12345';
-    const quizzes = await getFinishedQuizzes(userId);
-    console.log(`Finished Quizzes for user ${userId}:`, quizzes);
-
-    // Updating the score of a finished quiz
-    const quizIdToUpdate = 'abcdef';
-    const newScore = 95;
-    const updatedQuiz = await updateScore(quizIdToUpdate, newScore);
-    console.log('Updated Quiz:', updatedQuiz);
-
-    // Deleting a finished quiz
-    const quizIdToDelete = 'abcdef';
-    const deleteResult = await deleteFinishedQuiz(quizIdToDelete);
-    console.log('Delete Result:', deleteResult);
-}
-
-runExamples();
