@@ -1,5 +1,5 @@
 // finishedQuizApi.js
-
+"use server"
 import { Quiz } from "@/constants/types";
 
 const API_URL = 'http://localhost:3000/api/v1'; // Adjust the base URL as necessary
