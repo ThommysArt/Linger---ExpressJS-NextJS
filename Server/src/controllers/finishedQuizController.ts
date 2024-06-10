@@ -14,7 +14,7 @@ const FinishedQuizController = {
             });
             return response.status(201).json(finishedQuiz);
         } catch (error) {
-            return response.status(500).json({ error: error.message });
+            return response.status(500).json({ error: error});
         }
     },
 
@@ -27,7 +27,7 @@ const FinishedQuizController = {
             });
             return response.status(200).json(finishedQuizzes);
         } catch (error) {
-            return response.status(500).json({ error: error.message });
+            return response.status(500).json({ error });
         }
     },
 
@@ -40,7 +40,7 @@ const FinishedQuizController = {
             });
             return response.status(200).json({ message: "Deleted FinishedQuiz successfully" });
         } catch (error) {
-            return response.status(500).json({ error: error.message });
+            return response.status(500).json({ error: error });
         }
     },
 
@@ -55,7 +55,7 @@ const FinishedQuizController = {
             });
             return response.status(200).json(finishedQuiz);
         } catch (error) {
-            return response.status(500).json({ error: error.message });
+            return response.status(500).json({ error: error});
         }
     },
 };
