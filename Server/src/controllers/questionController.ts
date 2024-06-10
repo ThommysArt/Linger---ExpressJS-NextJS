@@ -1,35 +1,68 @@
 import { Request, Response } from 'express';
+import { PrismaClient } from '@prisma/client';
 
-export const createQuestion = (req: Request, res: Response): void => {
-  const { label, quizid } = req.body;
-  if (!label || !quizid) {
-    res.status(400).send('label and quizid are required');
-    return;
-  }
+// Initialize prisma client instance for database connection
+const prisma = new PrismaClient();
 
-  const newQuestion = Question.createQuestion(label, quizid);
-  res.status(201).json(newQuestion);
-};
+const QuestionController = {
+    createQuestion: async (req: Request, res: Response) => {
+        try {
+            const { label, quizId } = req.body;
+            if (!label || quizId === undefined) {
+                return res.status(400).json({ error: "label and quizid are required" });
+            }
 
-export const getQuestion = (req: Request, res: Response): void => {
-  const { id } = req.params;
-  const question = Question.getQuestion(Number(id));
-  if (!question) {
-    res.status(404).send('Question not found');
-    return;
-  }
+            const question = await prisma.question.create({
+                data: {
+                    label,
+                    quizId
+                },
+            });
+            return res.status(201).json(question);
+        } catch (error) {
+            return res.status(500).json(error);
+        }
+    },
 
-  res.status(200).json(question);
-};
+    getQuestion: async (req: Request, res: Response) => {
+        try {
+            const { id } = req.params;
+            const question = await prisma.question.findUnique({
+                where: { id: Number(id) },
+            });
+            if (question) {
+                return res.status(200).json(question);
+            } else {
+                return res.status(404).json({ message: 'Question not found' });
+            }
+        } catch (error) {
+            return res.status(500).json(error);
+        }
+    },
 
-export const getQuizQuestions = (req: Request, res: Response): void => {
-  const { quizid } = req.params;
-  const questions = Question.getQuizQuestions(Number(quizid));
-  res.status(200).json(questions);
-};
+    getQuizQuestions: async (req: Request, res: Response) => {
+        try {
+            const { quizId } = req.params;
+            const questions = await prisma.question.findMany({
+                where: { quizId: Number(quizId) },
+            });
+            return res.status(200).json(questions);
+        } catch (error) {
+            return res.status(500).json(error);
+        }
+    },
 
-export const deleteQuestion = (req: Request, res: Response): void => {
-  const { id } = req.params;
-  Question.deleteQuestion(Number(id));
-  res.status(204).send();
-};
+    deleteQuestion: async (req: Request, res: Response) => {
+        try {
+            const { id } = req.params;
+            await prisma.question.delete({
+                where: { id: Number(id) },
+            });
+            return res.status(200).json({ message: 'Deleted question successfully' });
+        } catch (error) {
+            return res.status(500).json(error);
+        }
+    },
+}
+
+export default QuestionController;
