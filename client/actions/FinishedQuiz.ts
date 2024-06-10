@@ -2,7 +2,7 @@
 "use server"
 import { FinishedQuiz, Quiz } from "@/constants/types";
 
-const API_URL = 'http://localhost:3000/api/v1'; // Adjust the base URL as necessary
+const API_URL = 'http://localhost:8000/api/v1'; // Adjust the base URL as necessary
 
 // Function to add a finished quiz\
 
