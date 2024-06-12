@@ -26,7 +26,7 @@ const LevelController = {
       const { id } = request.params;
 
       const level = await prisma.level.findUnique({
-        where: { id },
+        where: { id: parseInt(id) },
       });
 
       return response.status(200).json(level);
@@ -40,7 +40,7 @@ const LevelController = {
       const { languageId } = request.params;
 
       const levels = await prisma.level.findMany({
-        where: { languageId },
+        where: { languageId: parseInt(languageId) },
       });
 
       return response.status(200).json(levels);
@@ -54,7 +54,7 @@ const LevelController = {
       const { id } = request.params;
 
       await prisma.level.delete({
-        where: { id },
+        where: { id: parseInt(id) },
       });
 
       return response.status(200).json('Level deleted successfully');

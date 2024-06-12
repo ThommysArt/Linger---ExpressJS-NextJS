@@ -10,6 +10,8 @@ import QuizRouter from "./routes/quiz";
 import FinishedQuizRouter from "./routes/finishedQuiz"
 import QuestionRouter from "./routes/question";
 import OptionRouter from "./routes/option"
+import LevelRouter from "./routes/level"
+import LessonRouter from "./routes/lesson"
 
 //For env File 
 dotenv.config();
@@ -37,6 +39,8 @@ app.use("/api/v1/", QuizRouter)
 app.use("/api/v1/", FinishedQuizRouter)
 app.use("/api/v1/", QuestionRouter)
 app.use("/api/v1/", OptionRouter)
+app.use("/api/v1/", LessonRouter)
+app.use("/api/v1/", LevelRouter)
 
 // Start the server
 app.listen(port, () => {
