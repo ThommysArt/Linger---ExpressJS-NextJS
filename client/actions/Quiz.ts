@@ -48,9 +48,9 @@ async function getQuiz(id: string): Promise<Quiz> {
 }
 
 // Function to get quizzes by level
-async function getLevelQuiz(id: string): Promise<Quiz[]> {
+async function getLevelQuiz(levelId: number): Promise<Quiz[]> {
     try {
-        const response = await fetch(`${API_URL}/quiz/${id}/level`);
+        const response = await fetch(`${API_URL}/quiz/${levelId}/level`);
         return await response.json();
     } catch (error) {
         console.error('Error getting quizzes by level:', error);

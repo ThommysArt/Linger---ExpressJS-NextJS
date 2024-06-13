@@ -15,7 +15,7 @@ export default function AuthLayout ({
     children: React.ReactNode;
   }>) {
     return (
-        <div className="grid grid-rows-8 gap-4 overscroll-none">
+        <div className="grid grid-rows-8 gap-4 md:gap-8 overscroll-none">
             <div className="row-span-1 flex flex-col">
                 <div className="grid grid-cols-6 gap-1 items-center p-2">
                     <Image src="/Linger1.svg" alt="Linger" className="col-span-1 rounded-xl" width={40} height={40}/>
@@ -30,7 +30,7 @@ export default function AuthLayout ({
                 </div>
                 <Separator />
             </div>
-            <div className="row-span-7 h-full overscroll-y-auto">
+            <div className="row-span-7 h-full px-2 md:px-8 lg:px-12 overscroll-y-auto">
                 {children}
             </div>
         </div>
