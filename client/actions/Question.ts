@@ -1,6 +1,5 @@
 import { Question } from "@/constants/types";
-
-const API_URL = 'http://localhost:8000/api/v1'; // Adjust the base URL as necessary
+import { API_URL } from "@/constants/urls"; // Adjust the base URL as necessary
 
 // Function to create a new question
 async function createQuestion(label: string, quizId: number): Promise<Question> {

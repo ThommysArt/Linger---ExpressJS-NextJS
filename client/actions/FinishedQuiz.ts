@@ -1,8 +1,7 @@
 // finishedQuizApi.js
 "use server"
 import { FinishedQuiz, Quiz } from "@/constants/types";
-
-const API_URL = 'http://localhost:8000/api/v1'; // Adjust the base URL as necessary
+import { API_URL } from "@/constants/urls";// Adjust the base URL as necessary
 
 // Function to add a finished quiz\
 

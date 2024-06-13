@@ -1,6 +1,6 @@
 // Quiz.ts
 import { Quiz } from "@/constants/types";
-const API_URL = 'http://localhost:8000'; // Adjust the base URL as necessary
+import { API_URL } from "@/constants/urls";
 
 // Function to create a new quiz
 async function addQuiz(quizData: Quiz): Promise<Quiz> {

@@ -1,9 +1,10 @@
 "use server"
 import { Level } from "@/constants/types";
+import { API_URL } from "@/constants/urls";
 
 const createLevel = async (level: Level): Promise<Level | null> => {
   try {
-    const response = await fetch("https://localhost:8080/api/v1/levels", {
+    const response = await fetch(`${API_URL}/levels`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -24,7 +25,7 @@ const createLevel = async (level: Level): Promise<Level | null> => {
 
 const getLevel = async (levelId: number): Promise<Level | null> => {
   try {
-    const response = await fetch(`https://localhost:8080/api/v1/levels/${levelId}`, {
+    const response = await fetch(`${API_URL}/levels/${levelId}`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -44,7 +45,7 @@ const getLevel = async (levelId: number): Promise<Level | null> => {
 
 const getAllLevels = async (): Promise<Level[] | null> => {
   try {
-    const response = await fetch("https://localhost:8080/api/v1/levels", {
+    const response = await fetch(`${API_URL}/levels`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -64,7 +65,7 @@ const getAllLevels = async (): Promise<Level[] | null> => {
 
 const updateLevel = async (levelId: number, level: Level): Promise<Level | null> => {
   try {
-    const response = await fetch(`https://localhost:8080/api/v1/levels/${levelId}`, {
+    const response = await fetch(`${API_URL}/levels/${levelId}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -85,7 +86,7 @@ const updateLevel = async (levelId: number, level: Level): Promise<Level | null>
 
 const deleteLevel = async (levelId: number): Promise<string | null> => {
   try {
-    const response = await fetch(`https://localhost:8080/api/v1/levels/${levelId}`, {
+    const response = await fetch(`${API_URL}/levels/${levelId}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",

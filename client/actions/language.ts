@@ -13,10 +13,12 @@ import { Language } from "@/constants/types"
 - There is a file in /clent/constants/types.ts that contains all the data types of the Classes you were assigned, import them
 */
 
+import { API_URL } from "@/constants/urls"
+
 // Function to get all languages from the database using our api
 const getAllLanguages = async (): Promise<Language[] | null> => {
     try {
-        const response = await fetch("http://localhost:8000/api/v1/languages/all/", {
+        const response = await fetch(`${API_URL}/languages`, {
         method: "GET",
         headers: {
             'Content-Type': 'application/json'
@@ -34,7 +36,7 @@ const getAllLanguages = async (): Promise<Language[] | null> => {
 // Function to get a particular language from the database
 const getLanguage = async (id: number): Promise<Language | null> => {
     try {
-        const response = await fetch("http://localhost:8000/api/v1/languages/", {
+        const response = await fetch(`${API_URL}/languages`, {
             method: "GET",
             headers: {
                 'Content-Type': 'application/json'
@@ -53,7 +55,7 @@ const getLanguage = async (id: number): Promise<Language | null> => {
 // Function to create a new language in our database using our api
 const createLanguage = async (language: Language): Promise<Language | null> => {
     try {
-        const response = await fetch("http://localhost:8000/api/v1/languages", {
+        const response = await fetch(`${API_URL}/languages`, {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json'
@@ -93,7 +95,7 @@ const updateLanguage = async (language: Language): Promise<Language | null> => {
 // Function delete a particular language form the database using our api
 const deleteLanguage = async (id: number): Promise<Language | null> => {
     try {
-        const response = await fetch("http://localhost:8000/api/v1/languages", {
+        const response = await fetch(`${API_URL}/languages`, {
             method: "DELETE",
             headers: {
                 'Content-Type': 'application/json'

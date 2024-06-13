@@ -1,9 +1,10 @@
 "use server"
 import { Lesson } from "@/constants/types";
+import { API_URL } from "@/constants/urls";
 
 const createLesson = async (lesson: Lesson): Promise<Lesson | null> => {
   try {
-    const response = await fetch("https://localhost:8080/api/v1/lessons", {
+    const response = await fetch(`${API_URL}/lesssons`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -24,7 +25,7 @@ const createLesson = async (lesson: Lesson): Promise<Lesson | null> => {
 
 const getLesson = async (lessonId: number): Promise<Lesson | null> => {
   try {
-    const response = await fetch(`https://localhost:8080/api/v1/lessons/${lessonId}`, {
+    const response = await fetch(`${API_URL}/lessons/${lessonId}`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -44,7 +45,7 @@ const getLesson = async (lessonId: number): Promise<Lesson | null> => {
 
 const getAllLessonsForLevel = async (levelId: number): Promise<Lesson[] | null> => {
   try {
-    const response = await fetch(`https://localhost:8080/api/v1/levels/${levelId}/lessons`, {
+    const response = await fetch(`${API_URL}/levels/${levelId}/lessons`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -64,7 +65,7 @@ const getAllLessonsForLevel = async (levelId: number): Promise<Lesson[] | null> 
 
 const updateLesson = async (lessonId: number, lesson: Lesson): Promise<Lesson | null> => {
   try {
-    const response = await fetch(`https://localhost:8080/api/v1/lessons/${lessonId}`, {
+    const response = await fetch(`${API_URL}/lessons/${lessonId}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -85,7 +86,7 @@ const updateLesson = async (lessonId: number, lesson: Lesson): Promise<Lesson | 
 
 const deleteLesson = async (lessonId: number): Promise<string | null> => {
   try {
-    const response = await fetch(`https://localhost:8080/api/v1/lessons/${lessonId}`, {
+    const response = await fetch(`${API_URL}/lessons/${lessonId}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",

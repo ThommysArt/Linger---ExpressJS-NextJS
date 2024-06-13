@@ -1,6 +1,5 @@
 import { Option } from "@/constants/types";
-
-const API_URL = 'http://localhost:8000/ap/v1'; // Adjust the base URL as necessary
+import { API_URL } from "@/constants/urls"; // Adjust the base URL as necessary
 
 // Function to create a new option
 async function createOption(label: string, correct: boolean = false, questionId: number): Promise<Option> {
