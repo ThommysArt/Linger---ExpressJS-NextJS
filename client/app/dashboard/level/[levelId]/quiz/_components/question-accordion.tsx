@@ -10,17 +10,19 @@ import { Label } from "@/components/ui/label"
 import { Option, Question } from "@/constants/types"
 import { useState } from "react"
 import QuestionOptions from "./question-options"
+import { Dispatch, SetStateAction } from "react"
 
 interface QuestionAccordionProps {
-    setTest: React.ReactNode,
+    setTest: Dispatch<SetStateAction<{ questionId: number; optionId: number; }[] | undefined>>,
+    test: {questionId: number, optionId: number}[]
     QnA: {question: Question, options: Option[]}[]
 }
 
-const QuestionAccordion: React.FC<QuestionAccordionProps> = ({QnA, setTest}) => {
+const QuestionAccordion: React.FC<QuestionAccordionProps> = ({QnA, test, setTest}) => {
 
     const setAnswer = (questionId: number, optionId: number) => {
-        if (quiz) {
-            const newquiz = quiz
+        if (test) {
+            const newquiz = test
             newquiz.push({questionId, optionId})
             setTest(newquiz)
         }

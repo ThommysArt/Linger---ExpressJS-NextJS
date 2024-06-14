@@ -44,7 +44,7 @@ const QuestionController = {
         try {
             const { quizId } = req.params;
             const questions = await prisma.question.findMany({
-                where: { quizId: Number(quizId) },
+                where: { quizId: +quizId },
             });
             return res.status(200).json(questions);
         } catch (error) {
