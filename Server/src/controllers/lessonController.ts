@@ -12,7 +12,7 @@ const LessonController = {
         data: {
           text,
           transcribed,
-          level: { connect: { id: levelId } },
+          levelId,
         },
       });
 
