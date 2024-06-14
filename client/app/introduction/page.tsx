@@ -1,21 +1,13 @@
-import { auth } from "@clerk/nextjs/server"
+
 import Image from "next/image"
 import { Card, CardContent } from "@/components/ui/card"
-import {
-    Command,
-    CommandDialog,
-    CommandEmpty,
-    CommandGroup,
-    CommandInput,
-    CommandItem,
-    CommandList,
-    CommandSeparator,
-    CommandShortcut,
-  } from "@/components/ui/command"
-  
+import { getAllLanguages } from "@/actions/language"
+import LanguageTable from "./_components/language-table"
 
-export default function Page () {
-    const { userId } = auth()
+export default async function Page() {
+    const languages = await getAllLanguages()
+    console.log(languages) 
+
     return (
         <div className="grid grid-rows-10 gap-5 p-5 md:p-15 lg:p-20">
             <div className="row-span-3">
@@ -29,18 +21,7 @@ export default function Page () {
                 </div>
             </div>
             <div className="row-span-7">
-                <Command className="rounded-lg border shadow-md">
-                    <CommandInput placeholder="Enter the language" />
-                    <CommandList>
-                        <CommandEmpty>No Language found.</CommandEmpty>
-                        <CommandGroup heading="Languages">
-                        <CommandItem>German</CommandItem>
-                        <CommandItem>French</CommandItem>
-                        <CommandItem>Japanese</CommandItem>
-                        <CommandItem>Chinese</CommandItem>
-                        </CommandGroup>
-                    </CommandList>
-                </Command>
+                <LanguageTable languages={languages!} />
             </div>
         </div>
     )

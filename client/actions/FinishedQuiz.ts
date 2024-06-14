@@ -1,4 +1,3 @@
-// finishedQuizApi.js
 "use server"
 import { FinishedQuiz, Quiz } from "@/constants/types";
 import { API_URL } from "@/constants/urls";// Adjust the base URL as necessary

@@ -1,3 +1,4 @@
+"use server"
 import { Question } from "@/constants/types";
 import { API_URL } from "@/constants/urls"; // Adjust the base URL as necessary
 
@@ -32,7 +33,7 @@ async function getQuestion(id: number): Promise<Question> {
 // Function to get questions by quiz id
 async function getQuizQuestions(quizId: number): Promise<Question[]> {
     try {
-        const response = await fetch(`${API_URL}/quiz/${quizId}/questions`);
+        const response = await fetch(`${API_URL}/quizzes/${quizId}/questions`);
         return await response.json();
     } catch (error) {
         console.error('Error getting questions by quiz id:', error);
