@@ -20,7 +20,7 @@ async function addQuiz(quizData: Quiz): Promise<Quiz> {
 }
 
 // Function to update an existing quiz
-async function updateQuiz(id: string, quizData: Partial<Quiz>): Promise<Quiz> {
+async function updateQuiz(id: number, quizData: Partial<Quiz>): Promise<Quiz> {
     try {
         const response = await fetch(`${API_URL}/quiz/${id}`, {
             method: 'PUT',
@@ -37,7 +37,7 @@ async function updateQuiz(id: string, quizData: Partial<Quiz>): Promise<Quiz> {
 }
 
 // Function to get a quiz by id
-async function getQuiz(id: string): Promise<Quiz> {
+async function getQuiz(id: number): Promise<Quiz> {
     try {
         const response = await fetch(`${API_URL}/quiz/${id}`);
         return await response.json();
@@ -59,7 +59,7 @@ async function getLevelQuiz(levelId: number): Promise<Quiz[]> {
 }
 
 // Function to get quizzes by language
-async function getLanguageQuiz(id: string): Promise<Quiz[]> {
+async function getLanguageQuiz(id: number): Promise<Quiz[]> {
     try {
         const response = await fetch(`${API_URL}/quiz/${id}/language`);
         return await response.json();
@@ -70,7 +70,7 @@ async function getLanguageQuiz(id: string): Promise<Quiz[]> {
 }
 
 // Function to delete a quiz by id
-async function deleteQuiz(id: string): Promise<{ message: string }> {
+async function deleteQuiz(id: number): Promise<{ message: string }> {
     try {
         const response = await fetch(`${API_URL}/quiz/${id}`, {
             method: 'DELETE'
