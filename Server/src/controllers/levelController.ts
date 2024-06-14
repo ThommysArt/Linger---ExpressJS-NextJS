@@ -11,7 +11,7 @@ const LevelController = {
       const level = await prisma.level.create({
         data: {
           title,
-          language: { connect: { id: languageId } },
+          languageId: languageId,
         },
       });
 
