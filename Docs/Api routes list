@@ -1,0 +1,52 @@
+# FinshedQuiz
+- /finishedQuiz | finishedQuiz(userId, quizId, score)
+- /finishedQuiz/:userId  | getFinishedQuizzes(userId)
+- /finishedQuiz/:id | deleteFinshedQuiz(id)
+- /finishedQuiz/:id/score | updateScore(id, score)
+
+# Language
+- /language | getLanguage(id)
+- /language/all | getAllLanguages()
+- /language  |  createLanguage(name, country)
+- /language | deleteLanguage(id)
+
+# lesson
+- /lessons | createLesson(text, transcribed, levelId)
+- /lessons/:id | updateLesson(text, transcribed
+- /lessons/:id | getLesson(id)
+- /levels/:levelId/lessons | getLevelLessons(levelId)
+
+# Level
+- /levels | createLevel(title, languageId)
+- /levels/:id | getLevel(id)
+- /language/:languageId/levels | getLanguageLevels(languageId)
+- /levels/:id | deleteLevel(id)
+
+# Options
+- /options | createOption(label, correct, questionId)
+- /options/:id | updateOption(id, correct)
+- /options/:id | getOption(id)
+- /questions/:questionId/options | getQuestionOption(questionId)
+- /options/:id | deleteOption(id)
+
+# Quiz
+- /quiz | createQuiz(title, levelId, languageId)
+- /quiz/:id | updateQuiz(id, title, levelId, languageId)
+- /quiz/:id | getQuiz(id)
+- /quiz/:id/level | getLevelQuiz(levelId)
+- /quiz/:id/language | getLanguageQuiz(languageId)
+- /quiz/:id | deleteQuiz(id)
+
+# user
+- /users | getUser(id)
+- /users/all | getAllUsers()
+- /users/ | createUser(userId, fullname)
+- /users/ | deleteUser(id)
+- /users/ | updateUsername(id, fullname)
+
+# UserLanguage
+- /user-language | addUserLanguage(useId, languageId, levelId)
+- /user-language/level | updateLevel(id, levelId)
+- /user-language | deleteUserLanguage(id)
+- /user-language | getUserLanguage(userId)
+

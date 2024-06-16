@@ -1,0 +1,82 @@
+[
+  {
+    "label": "Translate to French: 'The cat is black.'",
+    "quizId": 7
+  },
+  {
+    "label": "Translate to French: 'She is happy.'",
+    "quizId": 7
+  },
+  {
+    "label": "Translate to French: 'I have a dog.'",
+    "quizId": 7
+  },
+  {
+    "label": "Translate to French: 'We are friends.'",
+    "quizId": 7
+  },
+  {
+    "label": "Translate to French: 'He eats an apple.'",
+    "quizId": 7
+  },
+  {
+    "label": "Translate to French: 'The book is on the table.'",
+    "quizId": 7
+  },
+  {
+    "label": "Translate to French: 'They are students.'",
+    "quizId": 7
+  },
+  {
+    "label": "Translate to French: 'You have a car.'",
+    "quizId": 7
+  },
+  {
+    "label": "Translate to French: 'It is raining.'",
+    "quizId": 7
+  },
+  {
+    "label": "Translate to French: 'My name is John.'",
+    "quizId": 7
+  },
+  {
+    "label": "What is the French word for 'apple'?",
+    "quizId": 33
+  },
+  {
+    "label": "What is the French word for 'book'?",
+    "quizId": 33
+  },
+  {
+    "label": "What is the French word for 'car'?",
+    "quizId": 33
+  },
+  {
+    "label": "What is the French word for 'house'?",
+    "quizId": 33
+  },
+  {
+    "label": "What is the French word for 'school'?",
+    "quizId": 33
+  },
+  {
+    "label": "What is the French word for 'teacher'?",
+    "quizId": 33
+  },
+  {
+    "label": "What is the French word for 'student'?",
+    "quizId": 33
+  },
+  {
+    "label": "What is the French word for 'dog'?",
+    "quizId": 33
+  },
+  {
+    "label": "What is the French word for 'cat'?",
+    "quizId": 33
+  },
+  {
+    "label": "What is the French word for 'water'?",
+    "quizId": 33
+  }
+]
