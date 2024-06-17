@@ -15,12 +15,12 @@ import { useEffect } from "react"
 
 interface SelectQuizProps {
     lessons: Lesson[] | null,
-    quizes: Quiz[] | null
+    quizzes: Quiz[] | null
 }
 
-const SelectQuiz: React.FC<SelectQuizProps> = ({lessons, quizes}) => {
+const SelectQuiz: React.FC<SelectQuizProps> = ({lessons, quizzes}) => {
     const router = useRouter()
-    console.log("quizes: ", quizes)
+    console.log("quizzes: ", quizzes)
 
     return (
         <div className="flex flex-col gap-8">
@@ -44,12 +44,12 @@ const SelectQuiz: React.FC<SelectQuizProps> = ({lessons, quizes}) => {
                 <Table>
                     <TableHeader>
                         <TableRow>
-                            <TableHead>Quizes</TableHead>
+                            <TableHead>quizzes</TableHead>
                             <TableHead>Title</TableHead>
                         </TableRow>
                     </TableHeader>
                     <TableBody>
-                        {Array.isArray(quizes) && quizes.map((quiz, index) => (
+                        {Array.isArray(quizzes) && quizzes.map((quiz, index) => (
                             <TableRow key={index} onClick={()=>router.push(`/dashboard/level/quiz/${quiz.id}`)}>
                                 <TableCell>{quiz.id}</TableCell>
                                 <TableCell>{quiz.title}</TableCell>

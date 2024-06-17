@@ -46,17 +46,27 @@ const QuizController = {
 
     // Get the levelId of a quiz by ID
     getLevelQuiz: async (request: Request, response: Response) => {
+        try {
+          const { levelId } = request.params;
+          console.log('Received levelId:', levelId);
+          const parsedLevelId = parseInt(levelId, 10);
       
-            const {levelId} = request.params
-        try{
-                    const quiz = await prisma.quiz.findMany({
-                    where:{ levelId: parseInt(levelId, 10)}
-                    })
-            return response.status(200).json(quiz);
+          if (isNaN(parsedLevelId)) {
+            console.error('Invalid level ID:', levelId);
+            return response.status(400).json({ error: "Invalid level ID" });
+          }
+      
+          const quiz = await prisma.quiz.findMany({
+            where: { levelId: parsedLevelId }
+          });
+      
+          return response.status(200).json(quiz);
         } catch (error) {
-            return response.status(500).json({ error: error });
+          console.error('Internal server error:', error);
+          return response.status(500).json({ error: error });
         }
-    },
+      },
+      
 
     // Get the languageId of a quiz by ID
     getLanguageQuiz: async (request: Request, response: Response) => {
