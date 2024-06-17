@@ -50,7 +50,7 @@ async function getQuiz(id: number): Promise<Quiz> {
 // Function to get quizzes by level
 async function getLevelQuiz(levelId: number): Promise<Quiz[]> {
     try {
-      const response = await fetch(`${API_URL}/quiz/${levelId}/level`, {
+      const response = await fetch(`${API_URL}/quiz/level/${levelId}`, {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
@@ -74,7 +74,7 @@ async function getLevelQuiz(levelId: number): Promise<Quiz[]> {
 // Function to get quizzes by language
 async function getLanguageQuiz(id: number): Promise<Quiz[]> {
     try {
-        const response = await fetch(`${API_URL}/quiz/${id}/language`);
+        const response = await fetch(`${API_URL}/quiz/language/${id}`);
         return await response.json();
     } catch (error) {
         console.error('Error getting quizzes by language:', error);

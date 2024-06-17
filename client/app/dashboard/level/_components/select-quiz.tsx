@@ -3,7 +3,6 @@ import { Card } from "@/components/ui/card"
 import {
     Table,
     TableBody,
-    TableCaption,
     TableCell,
     TableHead,
     TableHeader,
@@ -11,7 +10,6 @@ import {
 } from "@/components/ui/table"
 import { Lesson, Quiz } from "@/constants/types"
 import { useRouter } from "next/navigation"
-import { useEffect } from "react"
 
 interface SelectQuizProps {
     lessons: Lesson[] | null,

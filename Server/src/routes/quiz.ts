@@ -7,8 +7,8 @@ const router = Router();
 router.post('/quiz', QuizController.createQuiz);
 router.put('/quiz/:id', QuizController.updateQuiz);
 router.get('/quiz/:id', QuizController.getQuiz);
-router.get('/quiz/:id/level', QuizController.getLevelQuiz);
-router.get('/quiz/:id/language', QuizController.getLanguageQuiz);
+router.get('/quiz/level/:levelId', QuizController.getLevelQuiz);
+router.get('/quiz/langauge/:languageId', QuizController.getLanguageQuiz);
 router.delete('/quiz/:id', QuizController.deleteQuiz);
 
 export default router;
