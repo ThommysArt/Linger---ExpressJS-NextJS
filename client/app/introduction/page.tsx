@@ -1,6 +1,4 @@
 
-import Image from "next/image"
-import { Card, CardContent } from "@/components/ui/card"
 import { getAllLanguages } from "@/actions/language"
 import LanguageTable from "./_components/language-table"
 

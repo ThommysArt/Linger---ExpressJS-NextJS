@@ -20,11 +20,7 @@ interface SelectQuizProps {
 
 const SelectQuiz: React.FC<SelectQuizProps> = ({lessons, quizes}) => {
     const router = useRouter()
-
-    useEffect(() => {
-        console.log('lessons:', lessons)
-        console.log('quizes:', quizes)
-    }, [lessons, quizes])
+    console.log("quizes: ", quizes)
 
     return (
         <div className="flex flex-col gap-8">
@@ -38,7 +34,7 @@ const SelectQuiz: React.FC<SelectQuizProps> = ({lessons, quizes}) => {
                     <TableBody>
                         {Array.isArray(lessons) && lessons.map((lesson, index) => (
                             <TableRow key={index} onClick={()=>router.push(`/dashboard/level/lesson/${lesson.id}`)}>
-                                <TableCell>{lesson.id}</TableCell>
+                                <TableCell>Lesson Number: {lesson.id}</TableCell>
                             </TableRow>
                         ))}
                     </TableBody>

@@ -49,14 +49,23 @@ const getAllLevels = async (languageId: number): Promise<Level[] | null> => {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
-      }
+      },
     });
-    return response.json();
+
+    if (!response.ok) {
+      const errorData = await response.json();
+      console.error('Failed to fetch levels:', response.status, errorData);
+      return null;
+    }
+
+    const levels = await response.json();
+    return levels;
   } catch (error) {
-    console.error(error);
+    console.error('Error fetching levels:', error);
     return null;
   }
 };
+
 
 const updateLevel = async (levelId: number, level: Level): Promise<Level | null> => {
   try {

@@ -21,7 +21,7 @@ const createUserLanguage = async (userLanguage: UserLanguage): Promise<UserLangu
     }
 }
 
-const getUserLanguage = async (userId: string): Promise<UserLanguage | null> => {
+const getUserLanguage = async (userId: string): Promise<UserLanguage[] | null> => {
     try {
         const response = await fetch(`${API_URL}/user-language/${userId}`, {
             method: "GET",

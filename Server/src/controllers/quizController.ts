@@ -50,7 +50,7 @@ const QuizController = {
             const {levelId} = request.params
         try{
                     const quiz = await prisma.quiz.findMany({
-                    where:{ levelId: parseInt(levelId)}
+                    where:{ levelId: parseInt(levelId, 10)}
                     })
             return response.status(200).json(quiz);
         } catch (error) {
@@ -63,7 +63,7 @@ const QuizController = {
         const { languageId } = request.params;
         try {
                  const quiz = await prisma.quiz.findMany({
-                    where:{ languageId: parseInt(languageId) }
+                    where:{ languageId: parseInt(languageId, 10) }
                     })
             return response.status(200).json(quiz);
         } catch (error) {
