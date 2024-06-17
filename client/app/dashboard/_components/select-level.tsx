@@ -8,18 +8,22 @@ import {
     TableHead,
     TableHeader,
     TableRow,
-  } from "@/components/ui/table"
-  
+} from "@/components/ui/table"
 import { Level } from "@/constants/types"
 import { useRouter } from "next/navigation"
-  
+
 interface SelectLevelProps {
     levels: Level[] | null
 }
 
-const SelectLevel: React.FC<SelectLevelProps> = ({levels}) => {
+const SelectLevel: React.FC<SelectLevelProps> = ({ levels }) => {
     const router = useRouter()
     console.log(levels)
+
+    if (!levels || !Array.isArray(levels)) {
+        return <div>No levels available</div>
+    }
+
     return (
         <Card>
             <Table>
@@ -30,8 +34,8 @@ const SelectLevel: React.FC<SelectLevelProps> = ({levels}) => {
                     </TableRow>
                 </TableHeader>
                 <TableBody>
-                    {levels && levels.map((level, index) => (
-                        <TableRow key={index} onClick={()=>router.push(`/dashboard/level/${level.id}`)}>
+                    {levels.map((level, index) => (
+                        <TableRow key={index} onClick={() => router.push(`/dashboard/level/${level.id}`)}>
                             <TableCell>{level.id}</TableCell>
                             <TableCell>{level.title}</TableCell>
                         </TableRow>

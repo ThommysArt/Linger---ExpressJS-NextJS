@@ -38,16 +38,22 @@ const LevelController = {
   getLanguageLevels: async (request: Request, response: Response) => {
     try {
       const { languageId } = request.params;
-
+      const parsedLanguageId = parseInt(languageId, 10);
+  
+      if (isNaN(parsedLanguageId)) {
+        return response.status(400).json({ error: "Invalid language ID" });
+      }
+  
       const levels = await prisma.level.findMany({
-        where: { languageId: parseInt(languageId) },
+        where: { languageId: parsedLanguageId },
       });
-
+  
       return response.status(200).json(levels);
     } catch (error) {
-      return response.status(500).json(error);
+      console.error(error);
+      return response.status(500).json({ error: "Internal server error" });
     }
-  },
+  },  
 
   deleteLevel: async (request: Request, response: Response) => {
     try {
