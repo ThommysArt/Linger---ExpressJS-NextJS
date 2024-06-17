@@ -18,7 +18,7 @@ import { API_URL } from "@/constants/urls"
 // Function to get all languages from the database using our api
 const getAllLanguages = async (): Promise<Language[] | null> => {
     try {
-        const response = await fetch(`${API_URL}/language`, {
+        const response = await fetch(`${API_URL}/language/all`, {
         method: "GET",
         headers: {
             'Content-Type': 'application/json'
@@ -36,7 +36,7 @@ const getAllLanguages = async (): Promise<Language[] | null> => {
 // Function to get a particular language from the database
 const getLanguage = async (id: number): Promise<Language | null> => {
     try {
-        const response = await fetch(`${API_URL}/languages`, {
+        const response = await fetch(`${API_URL}/language`, {
             method: "GET",
             headers: {
                 'Content-Type': 'application/json'

@@ -42,10 +42,11 @@ function sendAPIRequest(apiUrl, method, body) {
         });
     });
 }
-const quizData = JSON.parse(fs.readFileSync('quizzes.json', 'utf-8'));
+const optionData = JSON.parse(fs.readFileSync('options.json', 'utf-8'));
+var reqCount = 0;
 console.log('Starting requests');
-for (const quiz of quizData) {
-    sendAPIRequest('https://linger-rest-api.onrender.com/api/v1/quiz', 'POST', quiz)
-        .then((response) => console.log(response))
+for (const option of optionData) {
+    sendAPIRequest('https://linger-rest-api.onrender.com/api/v1/options', 'POST', option)
+        .then((response) => console.log(response, reqCount++))
         .catch((error) => console.error(error));
 }

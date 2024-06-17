@@ -9,7 +9,8 @@ import { redirect } from "next/navigation"
 export default async function Page () {
     const { userId } = auth()
     const userLanguage = await getUserLanguage(userId!)
-    if (!userLanguage) {
+    console.log(userId, userLanguage)
+    if (userLanguage === null) {
         redirect("/introduction")
     }
     const levels = await getAllLevels(userLanguage!.languageId)

@@ -9,7 +9,7 @@ import {
     SheetTrigger,
   } from "@/components/ui/sheet"
 import { Button } from "@/components/ui/button"
-import { HamburgerMenuIcon } from "@radix-ui/react-icons"
+import { HamburgerMenuIcon, ViewVerticalIcon } from "@radix-ui/react-icons"
 import { SignOutButton } from "@clerk/nextjs"
   
 const SideMenu = () => {
@@ -17,7 +17,7 @@ const SideMenu = () => {
         <Sheet>
             <SheetTrigger asChild>
                 <Button size="icon" variant="outline">
-                    <HamburgerMenuIcon />
+                    <ViewVerticalIcon />
                 </Button>
             </SheetTrigger>
             <SheetContent className="grid grid-rows-10 gap-2">

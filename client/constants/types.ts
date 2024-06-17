@@ -20,7 +20,7 @@ export type Language = {
   export type User = {
     userId: string;
     fullname: string;
-    isAdmin: boolean;
+    isAdmin: boolean|false;
   }
   
   export type UserLanguage = {

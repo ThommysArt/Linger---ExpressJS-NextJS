@@ -12,7 +12,20 @@ interface Quiz {
   languageId: number
 }
 
-async function sendAPIRequest(apiUrl: string, method: 'GET' | 'POST' | 'PUT' | 'DELETE', body?: Quiz): Promise<Response> {
+interface Question {
+  id: number,
+  label: string,
+  quizId: number
+}
+
+interface Option {
+  id: number,
+  label: string,
+  correct: false | boolean,
+  questionId: number
+}
+
+async function sendAPIRequest(apiUrl: string, method: 'GET' | 'POST' | 'PUT' | 'DELETE', body?: Option): Promise<Response> {
   return fetch(apiUrl, {
     method: method,
     headers: { 'Content-Type': 'application/json' },
@@ -20,11 +33,11 @@ async function sendAPIRequest(apiUrl: string, method: 'GET' | 'POST' | 'PUT' | '
   });
 }
 
-const quizData = JSON.parse(fs.readFileSync('quizzes.json', 'utf-8')) as Quiz[];
-
+const optionData = JSON.parse(fs.readFileSync('options.json', 'utf-8')) as Option[];
+var reqCount = 0
 console.log('Starting requests');
-for (const quiz of quizData) {
-  sendAPIRequest('https://linger-rest-api.onrender.com/api/v1/quiz', 'POST', quiz)
-    .then((response) => console.log(response))
+for (const option of optionData) {
+  sendAPIRequest('https://linger-rest-api.onrender.com/api/v1/options', 'POST', option)
+    .then((response) => console.log(response, reqCount++))
     .catch((error) => console.error(error));
 }

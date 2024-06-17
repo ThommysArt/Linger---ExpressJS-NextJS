@@ -13,18 +13,21 @@ import {
 import { useRouter } from "next/navigation"
 import { createUserLanguage } from "@/actions/userLanguage"
 import { useAuth } from "@clerk/nextjs"
+import { createUser } from "@/actions/user"
 
 interface LanguageTableProps {
-    languages: Language[]
+    languages: Language[] | null
 }
 
 const LanguageTable: React.FC<LanguageTableProps> = ({languages}) => {
     const router = useRouter()
     const { userId } = useAuth()
 
-    const setLanguage = (languageId:number) => {
+    const setLanguage = async (languageId:number) => {
         if (userId) {
-            const userLanguage = createUserLanguage({userId, languageId, levelId: 6})
+            const user = await createUser({userId: userId, fullname: "", isAdmin: false})
+            const userLanguage = await createUserLanguage({userId, languageId, levelId: 6})
+            console.log(user, userLanguage)
             router.push("/dashboard")
         }
     }

@@ -5,11 +5,11 @@ import { SideMenu } from "../_components/side-menu";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 export const metadata: Metadata = {
-    title: "Linger | DashBoard",
-    description: "Get to the next level. Your quiz is ready!",
+    title: "Linger | Introduction",
+    description: "Let's start by selecting your language!",
   };
 
-export default function DashboardLayout ({
+export default function IntroductionLayout ({
     children,
   }: Readonly<{
     children: React.ReactNode;
