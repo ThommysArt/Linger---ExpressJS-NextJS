@@ -6,13 +6,8 @@ const prisma = new PrismaClient();
 const OptionController = {
     createOption: async (req: Request, res: Response) => {
         try {
-            const { label, questionId, correct = false } = req.body;
             const option = await prisma.option.create({
-                data: {
-                    label,
-                    correct,
-                    questionId,
-                },
+                data: req.body
             });
             return res.status(201).json(option);
         } catch (error) {

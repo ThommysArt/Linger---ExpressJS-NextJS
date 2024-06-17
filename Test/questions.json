@@ -1,0 +1,777 @@
+[
+  {
+    "id": 2,
+    "label": "Translate to French: 'The cat is black.'",
+    "quizId": 7
+  },
+  {
+    "id": 3,
+    "label": "Translate to French: 'She is happy.'",
+    "quizId": 7
+  },
+  {
+    "id": 4,
+    "label": "Translate to French: 'I have a dog.'",
+    "quizId": 7
+  },
+  {
+    "id": 5,
+    "label": "Translate to French: 'We are friends.'",
+    "quizId": 7
+  },
+  {
+    "id": 6,
+    "label": "Translate to French: 'He eats an apple.'",
+    "quizId": 7
+  },
+  {
+    "id": 7,
+    "label": "Translate to French: 'The book is on the table.'",
+    "quizId": 7
+  },
+  {
+    "id": 8,
+    "label": "Translate to French: 'They are students.'",
+    "quizId": 7
+  },
+  {
+    "id": 9,
+    "label": "Translate to French: 'You have a car.'",
+    "quizId": 7
+  },
+  {
+    "id": 10,
+    "label": "Translate to French: 'It is raining.'",
+    "quizId": 7
+  },
+  {
+    "id": 11,
+    "label": "Translate to French: 'My name is John.'",
+    "quizId": 7
+  },
+  {
+    "id": 12,
+    "label": "What is the French word for 'apple'?",
+    "quizId": 33
+  },
+  {
+    "id": 13,
+    "label": "What is the French word for 'book'?",
+    "quizId": 33
+  },
+  {
+    "id": 14,
+    "label": "What is the French word for 'car'?",
+    "quizId": 33
+  },
+  {
+    "id": 15,
+    "label": "What is the French word for 'house'?",
+    "quizId": 33
+  },
+  {
+    "id": 16,
+    "label": "What is the French word for 'school'?",
+    "quizId": 33
+  },
+  {
+    "id": 17,
+    "label": "What is the French word for 'teacher'?",
+    "quizId": 33
+  },
+  {
+    "id": 18,
+    "label": "What is the French word for 'student'?",
+    "quizId": 33
+  },
+  {
+    "id": 19,
+    "label": "What is the French word for 'dog'?",
+    "quizId": 33
+  },
+  {
+    "id": 20,
+    "label": "What is the French word for 'cat'?",
+    "quizId": 33
+  },
+  {
+    "id": 21,
+    "label": "What is the French word for 'water'?",
+    "quizId": 33
+  },
+  {
+    "id": 22,
+    "label": "How do you say 'Hello' in French?",
+    "quizId": 9
+  },
+  {
+    "id": 23,
+    "label": "How do you say 'Goodbye' in French?",
+    "quizId": 9
+  },
+  {
+    "id": 24,
+    "label": "How do you say 'Please' in French?",
+    "quizId": 9
+  },
+  {
+    "id": 25,
+    "label": "How do you say 'Thank you' in French?",
+    "quizId": 9
+  },
+  {
+    "id": 26,
+    "label": "How do you say 'My name is...' in French?",
+    "quizId": 9
+  },
+  {
+    "id": 27,
+    "label": "How do you ask 'How are you?' in French?",
+    "quizId": 9
+  },
+  {
+    "id": 28,
+    "label": "How do you respond 'I am fine, thank you' in French?",
+    "quizId": 9
+  },
+  {
+    "id": 29,
+    "label": "How do you say 'Nice to meet you' in French?",
+    "quizId": 9
+  },
+  {
+    "id": 30,
+    "label": "How do you say 'Good morning' in French?",
+    "quizId": 9
+  },
+  {
+    "id": 31,
+    "label": "How do you say 'Good night' in French?",
+    "quizId": 9
+  },
+  {
+    "id": 32,
+    "label": "How do you say 'one' in French?",
+    "quizId": 8
+  },
+  {
+    "id": 33,
+    "label": "How do you say 'two' in French?",
+    "quizId": 8
+  },
+  {
+    "id": 34,
+    "label": "How do you say 'three' in French?",
+    "quizId": 8
+  },
+  {
+    "id": 35,
+    "label": "How do you say 'four' in French?",
+    "quizId": 8
+  },
+  {
+    "id": 36,
+    "label": "How do you say 'five' in French?",
+    "quizId": 8
+  },
+  {
+    "id": 37,
+    "label": "How do you say 'six' in French?",
+    "quizId": 8
+  },
+  {
+    "id": 38,
+    "label": "How do you say 'seven' in French?",
+    "quizId": 8
+  },
+  {
+    "id": 39,
+    "label": "How do you say 'eight' in French?",
+    "quizId": 8
+  },
+  {
+    "id": 40,
+    "label": "How do you say 'nine' in French?",
+    "quizId": 8
+  },
+  {
+    "id": 41,
+    "label": "How do you say 'ten' in French?",
+    "quizId": 8
+  },
+  {
+    "id": 42,
+    "label": "How do you say 'Monday' in French?",
+    "quizId": 12
+  },
+  {
+    "id": 43,
+    "label": "How do you say 'Tuesday' in French?",
+    "quizId": 12
+  },
+  {
+    "id": 44,
+    "label": "How do you say 'Wednesday' in French?",
+    "quizId": 12
+  },
+  {
+    "id": 45,
+    "label": "How do you say 'Thursday' in French?",
+    "quizId": 12
+  },
+  {
+    "id": 46,
+    "label": "How do you say 'Friday' in French?",
+    "quizId": 12
+  },
+  {
+    "id": 47,
+    "label": "How do you say 'Saturday' in French?",
+    "quizId": 12
+  },
+  {
+    "id": 48,
+    "label": "How do you say 'Sunday' in French?",
+    "quizId": 12
+  },
+  {
+    "id": 49,
+    "label": "How do you say 'January' in French?",
+    "quizId": 12
+  },
+  {
+    "id": 50,
+    "label": "How do you say 'February' in French?",
+    "quizId": 12
+  },
+  {
+    "id": 51,
+    "label": "How do you say 'Spring' in French?",
+    "quizId": 12
+  },
+  {
+    "id": 52,
+    "label": "How do you say 'Good morning' in French?",
+    "quizId": 19
+  },
+  {
+    "id": 53,
+    "label": "How do you say 'Good night' in French?",
+    "quizId": 19
+  },
+  {
+    "id": 54,
+    "label": "How do you say 'Thank you' in French?",
+    "quizId": 19
+  },
+  {
+    "id": 55,
+    "label": "How do you say 'Excuse me' in French?",
+    "quizId": 19
+  },
+  {
+    "id": 56,
+    "label": "How do you say 'Please' in French?",
+    "quizId": 19
+  },
+  {
+    "id": 57,
+    "label": "How do you say 'Yes' in French?",
+    "quizId": 19
+  },
+  {
+    "id": 58,
+    "label": "How do you say 'No' in French?",
+    "quizId": 19
+  },
+  {
+    "id": 59,
+    "label": "How do you say 'Sorry' in French?",
+    "quizId": 19
+  },
+  {
+    "id": 60,
+    "label": "How do you say 'See you later' in French?",
+    "quizId": 19
+  },
+  {
+    "id": 61,
+    "label": "How do you say 'Goodbye' in French?",
+    "quizId": 19
+  },
+  {
+    "id": 62,
+    "label": "How do you conjugate 'être' (to be) for 'I am' in French?",
+    "quizId": 6
+  },
+  {
+    "id": 63,
+    "label": "How do you conjugate 'avoir' (to have) for 'You have' in French?",
+    "quizId": 6
+  },
+  {
+    "id": 64,
+    "label": "How do you conjugate 'aller' (to go) for 'He/She goes' in French?",
+    "quizId": 6
+  },
+  {
+    "id": 65,
+    "label": "How do you conjugate 'faire' (to do/make) for 'We do' in French?",
+    "quizId": 6
+  },
+  {
+    "id": 66,
+    "label": "How do you conjugate 'venir' (to come) for 'They come' in French?",
+    "quizId": 6
+  },
+  {
+    "id": 67,
+    "label": "How do you conjugate 'parler' (to speak) for 'I speak' in French?",
+    "quizId": 6
+  },
+  {
+    "id": 68,
+    "label": "How do you conjugate 'prendre' (to take) for 'You take' in French?",
+    "quizId": 6
+  },
+  {
+    "id": 69,
+    "label": "How do you conjugate 'voir' (to see) for 'He/She sees' in French?",
+    "quizId": 6
+  },
+  {
+    "id": 70,
+    "label": "How do you conjugate 'savoir' (to know) for 'We know' in French?",
+    "quizId": 6
+  },
+  {
+    "id": 71,
+    "label": "How do you conjugate 'vouloir' (to want) for 'They want' in French?",
+    "quizId": 6
+  },
+  {
+    "id": 72,
+    "label": "Translate 'I am hungry' into French.",
+    "quizId": 23
+  },
+  {
+    "id": 73,
+    "label": "Translate 'She reads a book' into French.",
+    "quizId": 23
+  },
+  {
+    "id": 74,
+    "label": "Translate 'We go to school' into French.",
+    "quizId": 23
+  },
+  {
+    "id": 75,
+    "label": "Translate 'They speak French' into French.",
+    "quizId": 23
+  },
+  {
+    "id": 76,
+    "label": "Translate 'He listens to music' into French.",
+    "quizId": 23
+  },
+  {
+    "id": 77,
+    "label": "How do you pronounce 'Bonjour'?",
+    "quizId": 13
+  },
+  {
+    "id": 78,
+    "label": "How do you pronounce 'Merci'?",
+    "quizId": 13
+  },
+  {
+    "id": 79,
+    "label": "How do you pronounce 'Comment ça va'?",
+    "quizId": 13
+  },
+  {
+    "id": 80,
+    "label": "How do you pronounce 'Excusez-moi'?",
+    "quizId": 13
+  },
+  {
+    "id": 81,
+    "label": "How do you pronounce 'Oui'?",
+    "quizId": 13
+  },
+  {
+    "id": 82,
+    "label": "Listen to the audio and answer: What did she say? (Transcript: 'Je vais au marché.')",
+    "quizId": 28
+  },
+  {
+    "id": 83,
+    "label": "Listen to the audio and answer: Where are they going? (Transcript: 'Nous allons à la plage.')",
+    "quizId": 28
+  },
+  {
+    "id": 84,
+    "label": "Listen to the audio and answer: What time is it? (Transcript: 'Il est onze heures.')",
+    "quizId": 28
+  },
+  {
+    "id": 85,
+    "label": "Listen to the audio and answer: What does he want to eat? (Transcript: 'Il veut manger une pizza.')",
+    "quizId": 28
+  },
+  {
+    "id": 86,
+    "label": "Listen to the audio and answer: Where is she from? (Transcript: 'Elle vient de Paris.')",
+    "quizId": 28
+  },
+  {
+    "id": 87,
+    "label": "Which sentence demonstrates correct usage of the subjunctive mood in French?",
+    "quizId": 11
+  },
+  {
+    "id": 88,
+    "label": "Identify the sentence with correct usage of the passé composé tense in French.",
+    "quizId": 11
+  },
+  {
+    "id": 89,
+    "label": "Choose the sentence that correctly uses the conditional mood in French.",
+    "quizId": 11
+  },
+  {
+    "id": 90,
+    "label": "Select the sentence that demonstrates correct usage of relative pronouns in French.",
+    "quizId": 11
+  },
+  {
+    "id": 91,
+    "label": "Which sentence correctly uses the imperative mood in French?",
+    "quizId": 11
+  },
+  {
+    "id": 92,
+    "label": "What does the French idiom 'C'est la fin des haricots' mean in English?",
+    "quizId": 15
+  },
+  {
+    "id": 93,
+    "label": "Translate the French phrase 'Tomber dans les pommes' into English.",
+    "quizId": 15
+  },
+  {
+    "id": 94,
+    "label": "What does the idiom 'Avoir le cafard' mean in English?",
+    "quizId": 15
+  },
+  {
+    "id": 95,
+    "label": "Translate the French idiom 'Mettre les pieds dans le plat' into English.",
+    "quizId": 15
+  },
+  {
+    "id": 96,
+    "label": "What does the phrase 'Casser les pieds à quelqu'un' mean in English?",
+    "quizId": 15
+  },
+  {
+    "id": 97,
+    "label": "Read the passage and answer: What is the main idea of the text?",
+    "quizId": 3
+  },
+  {
+    "id": 98,
+    "label": "Read the passage and answer: Who is the main character in the story?",
+    "quizId": 3
+  },
+  {
+    "id": 99,
+    "label": "Read the passage and answer: Where does the story take place?",
+    "quizId": 3
+  },
+  {
+    "id": 100,
+    "label": "Read the passage and answer: What is the problem the characters face?",
+    "quizId": 3
+  },
+  {
+    "id": 101,
+    "label": "Read the passage and answer: How does the story end?",
+    "quizId": 3
+  },
+  {
+    "id": 102,
+    "label": "Which sentence correctly uses the passé composé tense in French?",
+    "quizId": 17
+  },
+  {
+    "id": 103,
+    "label": "Choose the sentence that demonstrates correct usage of the imparfait tense in French.",
+    "quizId": 17
+  },
+  {
+    "id": 104,
+    "label": "Identify the sentence with correct usage of the passé simple tense in French.",
+    "quizId": 17
+  },
+  {
+    "id": 105,
+    "label": "Select the sentence that correctly uses the plus-que-parfait tense in French.",
+    "quizId": 17
+  },
+  {
+    "id": 106,
+    "label": "Which sentence demonstrates correct usage of the passé antérieur tense in French?",
+    "quizId": 17
+  },
+  {
+    "id": 107,
+    "label": "Find the synonym for 'heureux' in French.",
+    "quizId": 4
+  },
+  {
+    "id": 108,
+    "label": "What is the antonym of 'chaud' in French?",
+    "quizId": 4
+  },
+  {
+    "id": 109,
+    "label": "Choose the synonym for 'grand' in French.",
+    "quizId": 4
+  },
+  {
+    "id": 110,
+    "label": "Identify the antonym of 'petit' in French.",
+    "quizId": 4
+  },
+  {
+    "id": 111,
+    "label": "Find the synonym for 'fort' in French.",
+    "quizId": 4
+  },
+  {
+    "id": 112,
+    "label": "What is the antonym of 'faible' in French?",
+    "quizId": 4
+  },
+  {
+    "id": 113,
+    "label": "Choose the synonym for 'rapide' in French.",
+    "quizId": 4
+  },
+  {
+    "id": 114,
+    "label": "Identify the antonym of 'lent' in French.",
+    "quizId": 4
+  },
+  {
+    "id": 115,
+    "label": "Find the synonym for 'bon' in French.",
+    "quizId": 4
+  },
+  {
+    "id": 116,
+    "label": "What is the antonym of 'mauvais' in French?",
+    "quizId": 4
+  },
+  {
+    "id": 117,
+    "label": "Which phrase expresses agreement in French?",
+    "quizId": 5
+  },
+  {
+    "id": 118,
+    "label": "Choose the phrase that expresses disagreement in French.",
+    "quizId": 5
+  },
+  {
+    "id": 119,
+    "label": "Identify the phrase used to express uncertainty or doubt in French.",
+    "quizId": 5
+  },
+  {
+    "id": 120,
+    "label": "Select the phrase used to express preference or choice in French.",
+    "quizId": 5
+  },
+  {
+    "id": 121,
+    "label": "Which phrase is used to give reasons or justifications in French?",
+    "quizId": 5
+  },
+  {
+    "id": 122,
+    "label": "Which sentence correctly uses the first conditional in French?",
+    "quizId": 22
+  },
+  {
+    "id": 123,
+    "label": "Choose the sentence that demonstrates correct usage of the second conditional in French.",
+    "quizId": 22
+  },
+  {
+    "id": 124,
+    "label": "Identify the sentence with correct usage of the third conditional in French.",
+    "quizId": 22
+  },
+  {
+    "id": 125,
+    "label": "Select the sentence that correctly uses the mixed conditional in French.",
+    "quizId": 22
+  },
+  {
+    "id": 126,
+    "label": "Which sentence demonstrates correct usage of the conditional perfect in French?",
+    "quizId": 22
+  },
+  {
+    "id": 127,
+    "label": "What is the main theme of the poem?",
+    "quizId": 26
+  },
+  {
+    "id": 128,
+    "label": "Who is the author of the poem?",
+    "quizId": 26
+  },
+  {
+    "id": 129,
+    "label": "What literary devices are used in the poem?",
+    "quizId": 26
+  },
+  {
+    "id": 130,
+    "label": "What is the tone of the poem?",
+    "quizId": 26
+  },
+  {
+    "id": 131,
+    "label": "What emotions does the poem evoke?",
+    "quizId": 26
+  },
+  {
+    "id": 132,
+    "label": "Translate the word 'ubiquitous' into French.",
+    "quizId": 21
+  },
+  {
+    "id": 133,
+    "label": "Choose the correct French translation for 'cacophony'.",
+    "quizId": 21
+  },
+  {
+    "id": 134,
+    "label": "Identify the appropriate French antonym for 'ephemeral'.",
+    "quizId": 21
+  },
+  {
+    "id": 135,
+    "label": "Translate the term 'neologism' into French.",
+    "quizId": 21
+  },
+  {
+    "id": 136,
+    "label": "What is the French equivalent of 'zeitgeist'?",
+    "quizId": 21
+  },
+  {
+    "id": 137,
+    "label": "Which sentence correctly uses the subjunctive mood in French?",
+    "quizId": 18
+  },
+  {
+    "id": 138,
+    "label": "Choose the sentence that demonstrates correct usage of the past perfect tense in French.",
+    "quizId": 18
+  },
+  {
+    "id": 139,
+    "label": "Identify the sentence with correct usage of the conditional perfect in French.",
+    "quizId": 18
+  },
+  {
+    "id": 140,
+    "label": "Select the sentence that correctly uses the passive voice in French.",
+    "quizId": 18
+  },
+  {
+    "id": 141,
+    "label": "Which sentence demonstrates correct usage of the imperative mood in French?",
+    "quizId": 18
+  },
+  {
+    "id": 142,
+    "label": "Translate the following phrase into French: 'The quick brown fox jumps over the lazy dog.'",
+    "quizId": 27
+  },
+  {
+    "id": 143,
+    "label": "Provide a French translation for the sentence: 'She will arrive at noon.'",
+    "quizId": 27
+  },
+  {
+    "id": 144,
+    "label": "Translate the question into French: 'What is your name?'",
+    "quizId": 27
+  },
+  {
+    "id": 145,
+    "label": "Translate the following paragraph into French:\n'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'",
+    "quizId": 27
+  },
+  {
+    "id": 146,
+    "label": "Translate the expression 'to be or not to be' into French.",
+    "quizId": 27
+  },
+  {
+    "id": 147,
+    "label": "Translate the following business phrase into French: 'We need to review the financial report before the meeting.'",
+    "quizId": 24
+  },
+  {
+    "id": 148,
+    "label": "Provide a French translation for the sentence: 'The company plans to expand its operations next year.'",
+    "quizId": 24
+  },
+  {
+    "id": 149,
+    "label": "Translate the question into French: 'What are the key performance indicators for this project?'",
+    "quizId": 24
+  },
+  {
+    "id": 150,
+    "label": "Translate the following paragraph into French:\n'The marketing team developed a new strategy to attract international clients. They will present it at the conference next month.'",
+    "quizId": 24
+  },
+  {
+    "id": 151,
+    "label": "Translate the expression 'return on investment' into French.",
+    "quizId": 24
+  },
+  {
+    "id": 152,
+    "label": "Translate the technical term 'algorithm' into French.",
+    "quizId": 31
+  },
+  {
+    "id": 153,
+    "label": "Provide a French translation for the sentence: 'The software engineer debugged the code.'",
+    "quizId": 31
+  },
+  {
+    "id": 154,
+    "label": "Translate the question into French: 'What are the specifications for the new product?'",
+    "quizId": 31
+  },
+  {
+    "id": 155,
+    "label": "Translate the following paragraph into French:\n'The team conducted tests to assess the functionality and reliability of the prototype.'",
+    "quizId": 31
+  },
+  {
+    "id": 156,
+    "label": "Translate the technical term 'artificial intelligence' into French.",
+    "quizId": 31
+  }
+]

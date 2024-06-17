@@ -7,16 +7,8 @@ const prisma = new PrismaClient();
 const QuestionController = {
     createQuestion: async (req: Request, res: Response) => {
         try {
-            const { label, quizId } = req.body;
-            if (!label || quizId === undefined) {
-                return res.status(400).json({ error: "label and quizid are required" });
-            }
-
             const question = await prisma.question.create({
-                data: {
-                    label,
-                    quizId
-                },
+                data: req.body
             });
             return res.status(201).json(question);
         } catch (error) {
