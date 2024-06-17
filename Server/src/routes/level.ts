@@ -10,7 +10,7 @@ router.post('/levels', LevelController.createLevel);
 router.get('/levels/:id', LevelController.getLevel);
 
 // Route for retrieving all language levels
-router.get('/language/:languageId/levels', LevelController.getLanguageLevels);
+router.get('/levels/language/:languageId', LevelController.getLanguageLevels);
 
 // Route for deleting a level
 router.delete('/levels/:id', LevelController.deleteLevel);

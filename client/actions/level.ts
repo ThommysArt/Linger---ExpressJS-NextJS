@@ -45,12 +45,11 @@ const getLevel = async (levelId: number): Promise<Level | null> => {
 
 const getAllLevels = async (languageId: number): Promise<Level[] | null> => {
   try {
-    const response = await fetch(`${API_URL}/levels`, {
+    const response = await fetch(`${API_URL}/language/${languageId}/levels`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ languageId }),
+      }
     });
 
     if (!response.ok) {

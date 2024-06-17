@@ -19,7 +19,7 @@ export type Language = {
   
   export type User = {
     userId: string;
-    fullname: string;
+    username: string;
     isAdmin: boolean|false;
   }
   
