@@ -5,7 +5,7 @@ import { API_URL } from "@/constants/urls";
 // Function to create a new quiz
 async function addQuiz(quizData: Quiz): Promise<Quiz> {
     try {
-        const response = await fetch(`${API_URL}/quiz`, {
+        const response = await fetch(`${API_URL}/:quiz`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -22,7 +22,7 @@ async function addQuiz(quizData: Quiz): Promise<Quiz> {
 // Function to update an existing quiz
 async function updateQuiz(id: number, quizData: Partial<Quiz>): Promise<Quiz> {
     try {
-        const response = await fetch(`${API_URL}/quiz/${id}`, {
+        const response = await fetch(`${API_URL}/:quiz/${id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'
