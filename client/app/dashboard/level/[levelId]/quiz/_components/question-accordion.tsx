@@ -31,7 +31,7 @@ const QuestionAccordion: React.FC<QuestionAccordionProps> = ({QnA, test, setTest
         <Accordion type="single" collapsible>
             {QnA.map((qna, index)=> (
                     <AccordionItem key={index} value={qna.question.id!.toString()}>
-                        <AccordionTrigger>Question {qna.question.id}</AccordionTrigger>
+                        <AccordionTrigger>Question {index+1}</AccordionTrigger>
                         <AccordionContent>
                             <div className="py-4 md:py-8">
                                 <Label className="py-4">{qna.question.label}</Label>

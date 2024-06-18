@@ -5,7 +5,7 @@ import { API_URL } from "@/constants/urls"; // Adjust the base URL as necessary
 // Function to create a new question
 async function createQuestion(label: string, quizId: number): Promise<Question> {
     try {
-        const response = await fetch(`${API_URL}/question`, {
+        const response = await fetch(`${API_URL}/questions`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -22,7 +22,7 @@ async function createQuestion(label: string, quizId: number): Promise<Question> 
 // Function to get a question by id
 async function getQuestion(id: number): Promise<Question> {
     try {
-        const response = await fetch(`${API_URL}/question/${id}`);
+        const response = await fetch(`${API_URL}/questions/${id}`);
         return await response.json();
     } catch (error) {
         console.error('Error getting question:', error);
@@ -33,7 +33,7 @@ async function getQuestion(id: number): Promise<Question> {
 // Function to get questions by quiz id
 async function getQuizQuestions(quizId: number): Promise<Question[]> {
     try {
-        const response = await fetch(`${API_URL}/quizzes/${quizId}/questions`, {
+        const response = await fetch(`${API_URL}/questions/quiz/${quizId}`, {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
@@ -57,7 +57,7 @@ async function getQuizQuestions(quizId: number): Promise<Question[]> {
 // Function to delete a question by id
 async function deleteQuestion(id: number): Promise<{ message: string }> {
     try {
-        const response = await fetch(`${API_URL}/question/${id}`, {
+        const response = await fetch(`${API_URL}/questions/${id}`, {
             method: 'DELETE'
         });
         return await response.json();

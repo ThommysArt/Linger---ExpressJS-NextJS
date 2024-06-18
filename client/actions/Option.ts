@@ -51,7 +51,7 @@ async function getOption(id: number): Promise<Option> {
 // Function to get options by question id
 async function getQuestionOptions(questionId: number): Promise<Option[]> {
     try {
-        const response = await fetch(`${API_URL}/question/${questionId}/options`);
+        const response = await fetch(`${API_URL}/questions/${questionId}/options`);
         return await response.json();
     } catch (error) {
         console.error('Error getting options by question id:', error);
