@@ -13,10 +13,11 @@ import { useRouter } from "next/navigation"
 
 interface SelectQuizProps {
     lessons: Lesson[] | null,
-    quizzes: Quiz[] | null
+    quizzes: Quiz[] | null,
+    levelId: number
 }
 
-const SelectQuiz: React.FC<SelectQuizProps> = ({lessons, quizzes}) => {
+const SelectQuiz: React.FC<SelectQuizProps> = ({lessons, quizzes, levelId}) => {
     const router = useRouter()
     console.log("quizzes: ", quizzes)
 
@@ -31,7 +32,7 @@ const SelectQuiz: React.FC<SelectQuizProps> = ({lessons, quizzes}) => {
                     </TableHeader>
                     <TableBody>
                         {Array.isArray(lessons) && lessons.map((lesson, index) => (
-                            <TableRow key={index} onClick={()=>router.push(`/dashboard/level/lesson/${lesson.id}`)}>
+                            <TableRow key={index} onClick={()=>router.push(`/dashboard/level/${levelId}/lesson/${lesson.id}`)}>
                                 <TableCell>Lesson Number: {lesson.id}</TableCell>
                             </TableRow>
                         ))}
@@ -48,7 +49,7 @@ const SelectQuiz: React.FC<SelectQuizProps> = ({lessons, quizzes}) => {
                     </TableHeader>
                     <TableBody>
                         {Array.isArray(quizzes) && quizzes.map((quiz, index) => (
-                            <TableRow key={index} onClick={()=>router.push(`/dashboard/level/quiz/${quiz.id}`)}>
+                            <TableRow key={index} onClick={()=>router.push(`/dashboard/level/${levelId}/quiz/${quiz.id}`)}>
                                 <TableCell>{quiz.id}</TableCell>
                                 <TableCell>{quiz.title}</TableCell>
                             </TableRow>

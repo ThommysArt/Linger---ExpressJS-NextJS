@@ -16,6 +16,6 @@ export default async function Page ({ params }: { params: { levelId: string } })
   console.log("quizzes: ", quizzes);
 
   return (
-    <SelectQuiz lessons={lessons} quizzes={quizzes} />
+    <SelectQuiz lessons={lessons} quizzes={quizzes} levelId={levelId} />
   );
 }

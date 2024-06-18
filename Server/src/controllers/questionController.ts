@@ -35,14 +35,24 @@ const QuestionController = {
     getQuizQuestions: async (req: Request, res: Response) => {
         try {
             const { quizId } = req.params;
+            console.log('Received quizId:', quizId);
+            const parsedQuizId = parseInt(quizId, 10);
+    
+            if (isNaN(parsedQuizId)) {
+                console.error('Invalid quiz ID:', quizId);
+                return res.status(400).json({ error: "Invalid quiz ID" });
+            }
+    
             const questions = await prisma.question.findMany({
-                where: { quizId: +quizId },
+                where: { quizId: parsedQuizId },
             });
             return res.status(200).json(questions);
         } catch (error) {
-            return res.status(500).json(error);
+            console.error('Internal server error:', error);
+            return res.status(500).json({ error: error });
         }
     },
+    
 
     deleteQuestion: async (req: Request, res: Response) => {
         try {

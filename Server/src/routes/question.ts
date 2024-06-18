@@ -5,7 +5,7 @@ const router = Router();
 
 router.post('/questions', QuestionController.createQuestion);
 router.get('/questions/:id', QuestionController.getQuestion);
-router.get('/quizzes/:quizid/questions', QuestionController.getQuizQuestions);
+router.get('/questions/quiz/:quizId', QuestionController.getQuizQuestions);
 router.delete('/questions/:id', QuestionController.deleteQuestion);
 
 export default router

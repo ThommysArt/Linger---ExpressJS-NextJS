@@ -33,13 +33,26 @@ async function getQuestion(id: number): Promise<Question> {
 // Function to get questions by quiz id
 async function getQuizQuestions(quizId: number): Promise<Question[]> {
     try {
-        const response = await fetch(`${API_URL}/quizzes/${quizId}/questions`);
+        const response = await fetch(`${API_URL}/quizzes/${quizId}/questions`, {
+            method: "GET",
+            headers: {
+                "Content-Type": "application/json",
+            },
+        });
+
+        if (!response.ok) {
+            const errorData = await response.json();
+            console.error('Failed to fetch questions:', response.status, errorData);
+            throw new Error(`Failed to fetch questions: ${response.statusText}`);
+        }
+
         return await response.json();
     } catch (error) {
         console.error('Error getting questions by quiz id:', error);
         throw error;
     }
 }
+
 
 // Function to delete a question by id
 async function deleteQuestion(id: number): Promise<{ message: string }> {
