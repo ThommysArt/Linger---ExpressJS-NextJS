@@ -6,6 +6,7 @@ import { redirect } from "next/navigation"
   
 export default async function Page () {
     const { userId } = auth()
+    console.log(userId)
     const userLanguage = await getUserLanguage(userId!)
     console.log('userId:', userId, 'userLanguage:', userLanguage)
     

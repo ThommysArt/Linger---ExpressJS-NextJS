@@ -1,3 +1,3 @@
-const API_URL = "https://linger-rest-api.onrender.com/api/v1"
+const API_URL = process.env.LINGER_REST_API_URL!.toString()
 
 export { API_URL }
